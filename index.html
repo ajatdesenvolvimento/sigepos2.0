@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Sigepos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <link rel="stylesheet" href="assets/css/materialize.css" media="screen" title="no title">
     <link rel="stylesheet" href="assets/css/icon.css" media="screen" title="no title">
   </head>
@@ -13,11 +14,16 @@
           <i class="material-icons">menu</i>
           Sigepos
         </a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a >Sass</a></li>
-          <li><a >Components</a></li>
-          <li><a >JavaScript</a></li>
+        <ul id="nav-mobiles" class="right hide-on-med-and-down">
+          <li> <a href="#" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Nova OS"><i class="material-icons">add</i></a></li>
+          <li><a href="#" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Mensagens"><i class="material-icons">inbox</i></a></li>
+          <li><a class='dropdown-button' data-stoppropagation="true" data-alignment="left" data-gutter="10" data-beloworigin="true" data-activates='dropdown1'><i class="material-icons">arrow_drop_down</i></a></li>
         </ul>
+        <ul id='dropdown1' class='dropdown-content'>
+         <li ><a href="#!" class="blue-text" >Config.</a></li>
+         <li class="divider"></li>
+         <li><a href="#!" class="blue-text">Sair</a></li>
+       </ul>
       </div>
     </nav>
     <ul id="slide-out" class="side-nav">
@@ -32,11 +38,12 @@
         <li><a href="#!"><i class="material-icons">build</i>Ordem de serviço</a></li>
         <li><a href="#!"><i class="material-icons">view_list</i>Categorias</a></li>
         <li><a href="#!"><i class="material-icons">group</i>Técnicos</a></li>
+        <li><a href="#!"><i class="material-icons">wc</i>Clientes</a></li>
         <li><a href="#!"><i class="material-icons">call</i>Contatos</a></li>
         <li><a href="#!"><i class="material-icons">settings</i>Configurações</a></li>
         <li><div class="divider"></div></li>
-        <li><a class="subheader">Subheader</a></li>
-        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+        <li><a class="subheader">Desenvolvido por</a></li>
+        <li><a class="waves-effect" target="_blank" href="http://ajatdesenvolvimento.com.br">AJAT Desenvolvimento ®</a></li>
     </ul>
 
 

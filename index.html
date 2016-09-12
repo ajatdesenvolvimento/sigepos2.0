@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="sigeposApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Sigepos</title>
+    <link rel="stylesheet" href="assets/css/materialize.css" media="screen" title="no title">
+    <link rel="stylesheet" href="assets/css/icon.css" media="screen" title="no title">
+  </head>
+  <body class="">
+    <nav ng-include="'components/menu.html'" class="black" ng-controller="menu" ng-click="openMenu()"><!-- MENU --></nav>
+    <ul id="slide-out" class="side-nav">
+        <li>
+          <div class="userView">
+            <img class="background" src="http://www.fg-a.com/wallpapers/geo-shapes-black-1280.jpg">
+            <a href="#!user"><img class="circle" src="assets/img/profile.jpg"></a>
+            <a href="#!name"><span class="blue-text name">AJAT Desenvolvimento</span></a>
+            <a href="#!email"><span class="blue-text email">ajatdesenvolvimento@gmail.com</span></a>
+          </div>
+        </li>
+        <li><a href="#!"><i class="material-icons">build</i>Ordem de serviço</a></li>
+        <li><a href="#!"><i class="material-icons">view_list</i>Categorias</a></li>
+        <li><a href="#!"><i class="material-icons">group</i>Técnicos</a></li>
+        <li><a href="#!"><i class="material-icons">call</i>Contatos</a></li>
+        <li><a href="#!"><i class="material-icons">settings</i>Configurações</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="subheader">Subheader</a></li>
+        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    </ul>
+
+
+      <script src="assets/js/angular.min.js"></script>
+      <script src="assets/js/config.js"></script>
+      <script src="modules/menuCtrl.js"></script>
+      <script src="assets/js/jquery-3.1.0.min.js"></script>
+      <script src="assets/js/bin/materialize.min.js"></script>
+      <script>
+
+      </script>
+
+  </body>
+</html>

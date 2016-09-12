@@ -7,11 +7,23 @@
     <link rel="stylesheet" href="assets/css/icon.css" media="screen" title="no title">
   </head>
   <body class="">
-    <nav ng-include="'components/menu.html'" class="black" ng-controller="menu" ng-click="openMenu()"><!-- MENU --></nav>
+    <nav class="black">
+      <div class="nav-wrapper">
+        <a style="cursor:pointer;margin-left:20px" data-activates="slide-out" class="menu-open brand-logo">
+          <i class="material-icons">menu</i>
+          Sigepos
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a >Sass</a></li>
+          <li><a >Components</a></li>
+          <li><a >JavaScript</a></li>
+        </ul>
+      </div>
+    </nav>
     <ul id="slide-out" class="side-nav">
         <li>
           <div class="userView">
-            <img class="background" src="http://www.fg-a.com/wallpapers/geo-shapes-black-1280.jpg">
+            <img class="background" src="assets/img/bg-profile.gif">
             <a href="#!user"><img class="circle" src="assets/img/profile.jpg"></a>
             <a href="#!name"><span class="blue-text name">AJAT Desenvolvimento</span></a>
             <a href="#!email"><span class="blue-text email">ajatdesenvolvimento@gmail.com</span></a>
@@ -30,11 +42,10 @@
 
       <script src="assets/js/angular.min.js"></script>
       <script src="assets/js/config.js"></script>
-      <script src="modules/menuCtrl.js"></script>
       <script src="assets/js/jquery-3.1.0.min.js"></script>
       <script src="assets/js/bin/materialize.min.js"></script>
       <script>
-
+      $(".menu-open").sideNav();
       </script>
 
   </body>

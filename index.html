@@ -20,7 +20,7 @@
               <div class="nav-wrapper black">
                 <form>
                   <div class="input-field">
-                    <input id="search" type="search" required>
+                    <input id="search" type="search" required placeholder="Pesquisar serviço">
                     <label for="search"><i class="material-icons">search</i></label>
                     <i class="material-icons">close</i>
                   </div>
@@ -39,35 +39,43 @@
        </ul>
       </div>
     </nav>
-    <ul id="slide-out" class="side-nav">
+    <ul id="slide-out" class="side-nav" ng-controller="index">
         <li>
           <div class="userView">
-            <img class="background" src="assets/img/bg-profile.gif">
+            <img class="background" src="assets/img/tarde.gif">
             <a href="#!user"><img class="circle" src="assets/img/profile.jpg"></a>
             <a href="#!name"><span class="blue-text name">AJAT Desenvolvimento</span></a>
             <a href="#!email"><span class="blue-text email">ajatdesenvolvimento@gmail.com</span></a>
           </div>
         </li>
-        <li><a href="#!"><i class="material-icons">build</i>Ordem de serviço</a></li>
-        <li><a href="#!"><i class="material-icons">view_list</i>Categorias</a></li>
-        <li><a href="#!"><i class="material-icons">group</i>Técnicos</a></li>
-        <li><a href="#!"><i class="material-icons">wc</i>Clientes</a></li>
-        <li><a href="#!"><i class="material-icons">call</i>Contatos</a></li>
-        <li><a href="#!"><i class="material-icons">settings</i>Configurações</a></li>
+        <li ng-click="_ordemServico()"><a href="#!"><i class="material-icons">build</i>Ordem de serviço</a></li>
+        <li ng-click="_categorias()"><a href="#!"><i class="material-icons">view_list</i>Categorias</a></li>
+        <li ng-click="_tecnicos()"><a href="#!"><i class="material-icons">group</i>Técnicos</a></li>
+        <li ng-click="_clientes()"><a href="#!"><i class="material-icons">wc</i>Clientes</a></li>
+        <li ng-click="_contatos()"><a href="#!"><i class="material-icons">call</i>Contatos</a></li>
+        <li ng-click="_relatorios()"><a href="#!"><i class="material-icons">timeline</i>Relatórios</a></li>
+        <li ng-click="_configuracoes()"><a href="#!"><i class="material-icons">settings</i>Configurações</a></li>
+        <li ng-click="_sair()"><a href="#!"><i class="material-icons">lock</i>Sair</a></li>
         <li><div class="divider"></div></li>
         <li><a class="subheader">Desenvolvido por</a></li>
         <li><a class="waves-effect" target="_blank" href="http://ajatdesenvolvimento.com.br">AJAT Desenvolvimento ®</a></li>
     </ul>
-    <div class="">
+    <div class="body" >
+      {{include_page}}
+      <div ng-include="include_page">
 
+      </div>
     </div>
 
       <script src="assets/js/angular.min.js"></script>
       <script src="assets/js/config.js"></script>
+      <!-- CONTROLLERS -->
+      <script type="text/javascript" src="modules/index/index.js"></script>
+      <!-- CONTROLLERS -->
       <script src="assets/js/jquery-3.1.0.min.js"></script>
       <script src="assets/js/bin/materialize.min.js"></script>
       <script>
-      $(".menu-open").sideNav();
+        $(".menu-open").sideNav();
       </script>
 
   </body>

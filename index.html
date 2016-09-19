@@ -39,7 +39,7 @@
        </ul>
       </div>
     </nav>
-    <ul id="slide-out" class="side-nav" ng-controller="index">
+    <ul id="slide-out" class="side-nav" ng-controller="menuCtrl">
         <li>
           <div class="userView">
             <img class="background" src="assets/img/tarde.gif">
@@ -61,7 +61,7 @@
         <li><a class="waves-effect" target="_blank" href="http://ajatdesenvolvimento.com.br">AJAT Desenvolvimento ®</a></li>
     </ul>
     <div class="body" >
-      {{include_page}}
+      <!-- {{include_page}} -->
       <div ng-include="include_page">
 
       </div>
@@ -70,7 +70,8 @@
       <script src="assets/js/angular.min.js"></script>
       <script src="assets/js/config.js"></script>
       <!-- CONTROLLERS -->
-      <script type="text/javascript" src="modules/index/index.js"></script>
+      <script type="text/javascript" src="modules/menu/menu.js"></script>
+      <script type="text/javascript" src="modules/categorias/categorias.js"></script>
       <!-- CONTROLLERS -->
       <script src="assets/js/jquery-3.1.0.min.js"></script>
       <script src="assets/js/bin/materialize.min.js"></script>

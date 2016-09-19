@@ -1,9 +1,10 @@
-app.controller('index',function($rootScope,$scope){
-  $rootScope.include_page = "modules/index/index.html";
-  $scope._ordemServico = function(){};
+app.controller('menuCtrl',function($rootScope,$scope){
+  $rootScope.include_page = "modules/ordemServico/ordemServico.html";
+  $scope._ordemServico = function(){
+    $rootScope.include_page = "modules/ordemServico/ordemServico.html";
+  };
   $scope._categorias = function(){
     $rootScope.include_page = "modules/categorias/categorias.html";
-    console.log('foi');
   };
   $scope._tecnicos = function(){};
   $scope._clientes = function(){};

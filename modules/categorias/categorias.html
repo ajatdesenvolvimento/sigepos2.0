@@ -1,16 +1,33 @@
 <div ng-controller="categoriasCtrl">
-  <nav class="blue">
-    <div class="nav-wrapper">
-      <div class="col s12">
-        <a class="breadcrumb">Início</a>
-        <a class="breadcrumb">Categorias</a>
-      </div>
+  <!-- <div class="row">
+    <div class="input-field col s6 offset-s3">
+      <input id="category_name" type="text" class="validate">
+      <label class="active" for="category_name">Categoria</label>
     </div>
-  </nav>
+  </div>
   <div class="row">
-      <div class="input-field col s6">
-        <input id="category_name" type="text" class="validate">
-        <label class="active" for="category_name">Categoria</label>
-      </div>
+    <div class="input-field col s6 offset-s3">
+      <textarea id="category_note" class="materialize-textarea"></textarea>
+      <label for="category_note">Observação</label>
     </div>
+  </div> -->
+  <table class="responsive-table striped centered">
+        <thead>
+          <tr>
+              <th data-field="id">Categoria</th>
+              <th data-field="name">Observação</th>
+              <th data-field="options" colspan="3">Opções</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr ng-repeat="category in categories">
+            <td>{{category.category_name}}</td>
+            <td>{{category.category_note}}...</td>
+            <td><a class="waves-effect waves-light "><i class="material-icons left">remove_red_eye</i>Ver</a></td>
+            <td><a class="waves-effect waves-light"><i class="material-icons left ">edit</i>Editar</a></td>
+            <td><a class="waves-effect waves-light"><i class="material-icons left ">edit</i>Excluir</a></td>
+          </tr>
+        </tbody>
+      </table>
 </div>
